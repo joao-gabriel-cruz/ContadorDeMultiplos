@@ -11,11 +11,12 @@ function dividirSomar() {
   }
   
   for (let i = 0; i < max; i++) {
-    if (i % 3 === 0) {
+    if (i % 3 === 0 && i !== 0) {
       mult3++;
     }
-    if (i % 5 === 0) {
+    if (i % 5 === 0 && i !== 0) {
       mult5++;
+      console.log(i)
     }
 
     document.getElementById('maxNum').innerHTML = max
@@ -32,7 +33,7 @@ function dividirSomar() {
     document.getElementById('mult3').innerHTML = `
      <div class="mult">
        <p>
-         existem ${mult3}  multiplos de 5 até ${max}
+         existem ${mult3}  multiplos de 3 até ${max}
        </p>
      </div>`;
   }
